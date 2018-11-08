@@ -5,6 +5,11 @@ class App extends Component {
         count: 0
     };
     
+    componentDidUpdate(prevProps, prevState) {
+        const { count } = this.state;
+        document.title = `You clicked ${count} times`;
+    }
+
     render() {
         const { count } = this.state;
         const handleClick = () => {
